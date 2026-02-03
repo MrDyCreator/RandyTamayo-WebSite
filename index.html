@@ -3,79 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern One-Page Website</title>
+  <title>Modern Colorful Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Build Fast. Ship Smart.</h1>
-    <p>A clean, modern one-page layout designed for products, portfolios, and internal dashboards.</p>
-    <button onclick="scrollToTable()">View Sample Data</button>
-  </header>
+  <nav class="navbar">
+    <h1 class="logo">Trainify</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#table">Plans</a></li>
+    </ul>
+  </nav>
 
-  <section>
-    <div class="cards">
-      <div class="card">
-        <h3>Modern Design</h3>
-        <p>Minimal UI, smooth motion, and accessible color contrast inspired by modern SaaS platforms.</p>
-      </div>
-      <div class="card">
-        <h3>Responsive Layout</h3>
-        <p>Optimized for desktop, tablet, and mobile using flexible grids and fluid typography.</p>
-      </div>
-      <div class="card">
-        <h3>Lightweight Code</h3>
-        <p>Pure HTML, CSS, and JavaScript — no frameworks, no dependencies, just clean code.</p>
-      </div>
-      <div class="card">
-        <h3>Scalable Foundation</h3>
-        <p>Easy to extend into a full product, dashboard, or landing page as your needs grow.</p>
-      </div>
+  <section id="home" class="hero">
+    <h2>Train Smarter 🚀</h2>
+    <p>Modern training tools for modern teams.</p>
+    <button id="ctaBtn">Get Started</button>
+  </section>
+
+  <section id="features" class="features">
+    <div class="card">
+      <h3>📊 Analytics</h3>
+      <p>Track performance with real-time insights.</p>
     </div>
-
-    <div class="table-wrapper" id="dataTable">
-      <table>
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Owner</th>
-            <th>Last Updated</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Next-Gen Platform</td>
-            <td>Product Team</td>
-            <td>Feb 02, 2026</td>
-            <td><span class="status active">Active</span></td>
-          </tr>
-          <tr>
-            <td>Analytics Dashboard</td>
-            <td>Data Engineering</td>
-            <td>Jan 28, 2026</td>
-            <td><span class="status pending">Pending</span></td>
-          </tr>
-          <tr>
-            <td>Automation Services</td>
-            <td>Platform Ops</td>
-            <td>Jan 20, 2026</td>
-            <td><span class="status active">Active</span></td>
-          </tr>
-          <tr>
-            <td>Legacy Migration</td>
-            <td>Infrastructure</td>
-            <td>Dec 15, 2025</td>
-            <td><span class="status archived">Archived</span></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="card">
+      <h3>⚡ Fast Setup</h3>
+      <p>Get running in minutes, not hours.</p>
+    </div>
+    <div class="card">
+      <h3>🎯 Focused Goals</h3>
+      <p>Train with purpose and clarity.</p>
     </div>
   </section>
 
+  <section id="table" class="table-section">
+    <h2>Training Plans</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Duration</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Starter</td>
+          <td>4 Weeks</td>
+          <td>Beginner</td>
+        </tr>
+        <tr>
+          <td>Pro</td>
+          <td>8 Weeks</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>Elite</td>
+          <td>12 Weeks</td>
+          <td>Advanced</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
   <footer>
-    © 2026 · Modern One-Page Website · Built with HTML, CSS & JavaScript
+    <p>© 2026 Trainify. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
