@@ -1,5 +1,5 @@
-function scrollToTable() {
-  document.getElementById("dataTable").scrollIntoView({
-    behavior: "smooth"
-  });
-}
+const button = document.getElementById("ctaBtn");
+
+button.addEventListener("click", () => {
+  alert("Welcome! Your training journey starts now 🚀");
+});
