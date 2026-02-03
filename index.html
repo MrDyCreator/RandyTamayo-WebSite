@@ -2,42 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Training Hub | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern One-Page Website</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <h1 class="logo">TrainingHub</h1>
-    <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="tables.html">Tables</a></li>
-      <li><a href="boxes.html">Boxes</a></li>
-    </ul>
-  </nav>
 
-<section class="hero">
-  <h2>Train Smarter. Build Faster.</h2>
-  <p>Modern learning experiences for real-world skills.</p>
-</section>
+  <header>
+    <h1>Build Fast. Ship Smart.</h1>
+    <p>A clean, modern one-page layout designed for products, portfolios, and internal dashboards.</p>
+    <button onclick="scrollToTable()">View Sample Data</button>
+  </header>
 
+  <section>
+    <div class="cards">
+      <div class="card">
+        <h3>Modern Design</h3>
+        <p>Minimal UI, smooth motion, and accessible color contrast inspired by modern SaaS platforms.</p>
+      </div>
+      <div class="card">
+        <h3>Responsive Layout</h3>
+        <p>Optimized for desktop, tablet, and mobile using flexible grids and fluid typography.</p>
+      </div>
+      <div class="card">
+        <h3>Lightweight Code</h3>
+        <p>Pure HTML, CSS, and JavaScript — no frameworks, no dependencies, just clean code.</p>
+      </div>
+      <div class="card">
+        <h3>Scalable Foundation</h3>
+        <p>Easy to extend into a full product, dashboard, or landing page as your needs grow.</p>
+      </div>
+    </div>
 
-  <section class="content">
-    <h3>Our Training Programs</h3>
-    <p>
-      We offer structured training for beginners and professionals.
-      Improve your skills with guided lessons, real-world examples,
-      and hands-on practice.
-    </p>
-
-    <p>
-      Navigate to <strong>Tables</strong> for structured training data
-      or <strong>Boxes</strong> to explore training modules visually.
-    </p>
+    <div class="table-wrapper" id="dataTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Owner</th>
+            <th>Last Updated</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Next-Gen Platform</td>
+            <td>Product Team</td>
+            <td>Feb 02, 2026</td>
+            <td><span class="status active">Active</span></td>
+          </tr>
+          <tr>
+            <td>Analytics Dashboard</td>
+            <td>Data Engineering</td>
+            <td>Jan 28, 2026</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>Automation Services</td>
+            <td>Platform Ops</td>
+            <td>Jan 20, 2026</td>
+            <td><span class="status active">Active</span></td>
+          </tr>
+          <tr>
+            <td>Legacy Migration</td>
+            <td>Infrastructure</td>
+            <td>Dec 15, 2025</td>
+            <td><span class="status archived">Archived</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <footer>
-    <p>© 2026 TrainingHub</p>
+    © 2026 · Modern One-Page Website · Built with HTML, CSS & JavaScript
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
