@@ -3,188 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Playground — Modern UI Kit</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Randy Tamayo — Portfolio</title>
+  <meta name="description" content="Randy Tamayo — frontend portfolio" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <h1>ColorPlay UI</h1>
-      <p class="muted">A colorful playground to learn HTML, CSS & JS</p>
-    </div>
-    <div class="controls">
-      <div class="theme-switch">
-        <button id="themeToggle" class="btn subtle">Toggle Theme</button>
-      </div>
-      <div class="search">
-        <input id="tableSearch" placeholder="Search table..." />
-      </div>
-      <div class="action">
-        <button id="addRowBtn" class="btn primary">Add Row</button>
-      </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Randy Tamayo</a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="panel left">
-      <h2>Text & Boxes</h2>
-
-      <div class="row">
-        <div class="card glass">
-          <h3 contenteditable="true">Editable Card Title</h3>
-          <p contenteditable="true" class="muted">Double-click or edit this text — play with contenteditable to practice inline editing.</p>
-          <div class="chips">
-            <span class="chip">interactive</span>
-            <span class="chip">glass</span>
-            <span class="chip">training</span>
-          </div>
-          <div class="inputs">
-            <label>Text input</label>
-            <input placeholder="Type here..." />
-            <label>Color</label>
-            <input type="color" id="sampleColor" value="#00c2a8" />
-            <label>Range</label>
-            <input type="range" min="0" max="100" value="60" />
-          </div>
-        </div>
-
-        <div class="card palette">
-          <h4>Color Palette</h4>
-          <div class="colors">
-            <div class="swatch" data-color="#FF6B6B" style="background:#FF6B6B">#FF6B6B</div>
-            <div class="swatch" data-color="#FFD93D" style="background:#FFD93D">#FFD93D</div>
-            <div class="swatch" data-color="#6BCB77" style="background:#6BCB77">#6BCB77</div>
-            <div class="swatch" data-color="#4D96FF" style="background:#4D96FF">#4D96FF</div>
-            <div class="swatch" data-color="#8557FF" style="background:#8557FF">#8557FF</div>
-          </div>
-          <small class="muted">Click a swatch to set header accent color.</small>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Hello — I’m Randy</h1>
+        <p class="lead">I build clean, modern frontends and delightful user experiences.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#work">View work</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
         </div>
       </div>
-
-      <div class="row">
-        <div class="box">
-          <h3>Note Box</h3>
-          <p class="muted">This box uses subtle shadowing and a soft border-radius — tweak CSS variables in styles.css to experiment.</p>
-        </div>
-
-        <div class="box outline">
-          <h3>Outline Box</h3>
-          <p>Use outline variant for more contrast. Try toggling classes or editing styles to learn effects.</p>
-        </div>
-      </div>
-
     </section>
 
-    <section class="panel right">
-      <h2>Modern Table</h2>
+    <section id="work" class="container section">
+      <h2 class="section-title">Selected projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project A</h3>
+          <p>Short description of the project — what it does and technologies used.</p>
+          <a class="card-link" href="#">Learn more</a>
+        </article>
 
-      <div class="table-wrap">
-        <table id="dataTable">
-          <thead>
-            <tr>
-              <th data-key="id">ID ▾</th>
-              <th data-key="name">Name ▾</th>
-              <th data-key="role">Role ▾</th>
-              <th data-key="status">Status ▾</th>
-              <th data-key="progress">Progress ▾</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Alex Rivers</td>
-              <td>Designer</td>
-              <td><span class="badge success">Active</span></td>
-              <td>
-                <div class="pbar"><div style="width: 72%"></div></div>
-              </td>
-              <td>
-                <button class="btn subtle small edit">Edit</button>
-                <button class="btn danger small delete">Delete</button>
-              </td>
-            </tr>
+        <article class="card">
+          <h3>Project B</h3>
+          <p>Short description of the project — what it does and technologies used.</p>
+          <a class="card-link" href="#">Learn more</a>
+        </article>
 
-            <tr>
-              <td>2</td>
-              <td>Jin Park</td>
-              <td>Frontend</td>
-              <td><span class="badge warning">Pending</span></td>
-              <td>
-                <div class="pbar"><div style="width: 48%"></div></div>
-              </td>
-              <td>
-                <button class="btn subtle small edit">Edit</button>
-                <button class="btn danger small delete">Delete</button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>3</td>
-              <td>Maria Gomez</td>
-              <td>Backend</td>
-              <td><span class="badge success">Active</span></td>
-              <td>
-                <div class="pbar"><div style="width: 95%"></div></div>
-              </td>
-              <td>
-                <button class="btn subtle small edit">Edit</button>
-                <button class="btn danger small delete">Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <article class="card">
+          <h3>Project C</h3>
+          <p>Short description of the project — what it does and technologies used.</p>
+          <a class="card-link" href="#">Learn more</a>
+        </article>
       </div>
+    </section>
 
-      <div class="controls-row">
-        <div class="mini-form">
-          <input id="newName" placeholder="Name" />
-          <input id="newRole" placeholder="Role" />
-          <button id="pushRow" class="btn primary small">Add to Table</button>
-        </div>
+    <section id="about" class="container section muted">
+      <h2 class="section-title">About</h2>
+      <p>
+        I’m a frontend developer focused on building accessible and polished user interfaces. I like small, maintainable code and pragmatic design.
+      </p>
+    </section>
 
-        <div class="legend">
-          <span class="badge success">Active</span>
-          <span class="badge warning">Pending</span>
-          <span class="badge danger">Blocked</span>
-        </div>
-      </div>
-
-      <h3>Cards</h3>
-      <div class="card-grid">
-        <div class="card mini">
-          <h4>Card A</h4>
-          <p class="muted">Small card with action</p>
-          <div class="card-actions">
-            <button class="btn subtle small">Share</button>
-            <button class="btn primary small">Open</button>
-          </div>
-        </div>
-
-        <div class="card mini">
-          <h4>Card B</h4>
-          <p class="muted">Try double-clicking the title to edit.</p>
-          <div class="card-actions">
-            <button class="btn subtle small">Edit</button>
-            <button class="btn danger small">Remove</button>
-          </div>
-        </div>
-
-        <div class="card mini">
-          <h4>Card C</h4>
-          <p class="muted">Progress demo</p>
-          <div class="pbar small"><div style="width: 40%"></div></div>
-        </div>
-      </div>
-
+    <section id="contact" class="container section">
+      <h2 class="section-title">Contact</h2>
+      <p>If you want to work together, send a message to <a href="mailto:hello@example.com">hello@example.com</a>.</p>
     </section>
   </main>
 
-  <footer class="footer">
-    <small>Made for training — tweak styles and scripts freely. Current user: dycreator007</small>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Randy Tamayo — Built with simple modern HTML/CSS/JS</small>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
