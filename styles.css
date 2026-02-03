@@ -1,16 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    background-color: #f0f0f0;
+  background: #f5f7fb;
+  color: #333;
 }
 
-h1 {
-    color: #3333cc;
+.navbar {
+  background: #111827;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+.logo {
+  color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #fff;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modern-table th,
+.modern-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.modern-table thead {
+  background: #4f46e5;
+  color: white;
+}
+
+.modern-table tbody tr:nth-child(even) {
+  background: #f3f4f6;
+}
+
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.box-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.box-card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  color: #6b7280;
 }
