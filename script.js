@@ -1,2 +1,5 @@
-// Simple JS for future expansion
-console.log("TrainingHub loaded successfully");
+function scrollToTable() {
+  document.getElementById("dataTable").scrollIntoView({
+    behavior: "smooth"
+  });
+}
