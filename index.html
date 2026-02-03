@@ -2,74 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Colorful Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Colorful Site</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav class="navbar">
-    <h1 class="logo">Trainify</h1>
-    <ul class="nav-links">
+    <div class="logo">Trainify</div>
+    <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#features">Features</a></li>
-      <li><a href="#table">Plans</a></li>
+      <li><a href="#plans">Plans</a></li>
     </ul>
   </nav>
 
   <section id="home" class="hero">
-    <h2>Train Smarter 🚀</h2>
-    <p>Modern training tools for modern teams.</p>
-    <button id="ctaBtn">Get Started</button>
+    <div class="hero-content">
+      <h1>Train <span>Smarter</span></h1>
+      <p>Colorful. Modern. Built for performance.</p>
+      <button id="cta">Start Now</button>
+    </div>
   </section>
 
   <section id="features" class="features">
-    <div class="card">
-      <h3>📊 Analytics</h3>
-      <p>Track performance with real-time insights.</p>
+    <div class="feature-card">
+      <h3>🚀 Speed</h3>
+      <p>Lightning-fast setup and execution.</p>
     </div>
-    <div class="card">
-      <h3>⚡ Fast Setup</h3>
-      <p>Get running in minutes, not hours.</p>
+    <div class="feature-card">
+      <h3>📈 Growth</h3>
+      <p>Track progress with visual clarity.</p>
     </div>
-    <div class="card">
-      <h3>🎯 Focused Goals</h3>
-      <p>Train with purpose and clarity.</p>
+    <div class="feature-card">
+      <h3>🎨 Design</h3>
+      <p>Modern UI that users love.</p>
     </div>
   </section>
 
-  <section id="table" class="table-section">
+  <section id="plans" class="plans">
     <h2>Training Plans</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Plan</th>
-          <th>Duration</th>
-          <th>Level</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Starter</td>
-          <td>4 Weeks</td>
-          <td>Beginner</td>
-        </tr>
-        <tr>
-          <td>Pro</td>
-          <td>8 Weeks</td>
-          <td>Intermediate</td>
-        </tr>
-        <tr>
-          <td>Elite</td>
-          <td>12 Weeks</td>
-          <td>Advanced</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="plan-grid">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p>4 Weeks</p>
+        <span>Beginner</span>
+      </div>
+      <div class="plan highlight">
+        <h3>Pro</h3>
+        <p>8 Weeks</p>
+        <span>Popular</span>
+      </div>
+      <div class="plan">
+        <h3>Elite</h3>
+        <p>12 Weeks</p>
+        <span>Advanced</span>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2026 Trainify. All rights reserved.</p>
+    © 2026 Trainify — Designed for modern teams
   </footer>
 
   <script src="script.js"></script>
