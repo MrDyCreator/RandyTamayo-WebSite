@@ -1,68 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modern Colorful Site</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Playground — Modern UI Kit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <nav class="navbar">
-    <div class="logo">Trainify</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#plans">Plans</a></li>
-    </ul>
-  </nav>
-
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Train <span>Smarter</span></h1>
-      <p>Colorful. Modern. Built for performance.</p>
-      <button id="cta">Start Now</button>
+  <header class="topbar">
+    <div class="brand">
+      <h1>ColorPlay UI</h1>
+      <p class="muted">A colorful playground to learn HTML, CSS & JS</p>
     </div>
-  </section>
-
-  <section id="features" class="features">
-    <div class="feature-card">
-      <h3>🚀 Speed</h3>
-      <p>Lightning-fast setup and execution.</p>
-    </div>
-    <div class="feature-card">
-      <h3>📈 Growth</h3>
-      <p>Track progress with visual clarity.</p>
-    </div>
-    <div class="feature-card">
-      <h3>🎨 Design</h3>
-      <p>Modern UI that users love.</p>
-    </div>
-  </section>
-
-  <section id="plans" class="plans">
-    <h2>Training Plans</h2>
-    <div class="plan-grid">
-      <div class="plan">
-        <h3>Starter</h3>
-        <p>4 Weeks</p>
-        <span>Beginner</span>
+    <div class="controls">
+      <div class="theme-switch">
+        <button id="themeToggle" class="btn subtle">Toggle Theme</button>
       </div>
-      <div class="plan highlight">
-        <h3>Pro</h3>
-        <p>8 Weeks</p>
-        <span>Popular</span>
+      <div class="search">
+        <input id="tableSearch" placeholder="Search table..." />
       </div>
-      <div class="plan">
-        <h3>Elite</h3>
-        <p>12 Weeks</p>
-        <span>Advanced</span>
+      <div class="action">
+        <button id="addRowBtn" class="btn primary">Add Row</button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <footer>
-    © 2026 Trainify — Designed for modern teams
+  <main class="container">
+    <section class="panel left">
+      <h2>Text & Boxes</h2>
+
+      <div class="row">
+        <div class="card glass">
+          <h3 contenteditable="true">Editable Card Title</h3>
+          <p contenteditable="true" class="muted">Double-click or edit this text — play with contenteditable to practice inline editing.</p>
+          <div class="chips">
+            <span class="chip">interactive</span>
+            <span class="chip">glass</span>
+            <span class="chip">training</span>
+          </div>
+          <div class="inputs">
+            <label>Text input</label>
+            <input placeholder="Type here..." />
+            <label>Color</label>
+            <input type="color" id="sampleColor" value="#00c2a8" />
+            <label>Range</label>
+            <input type="range" min="0" max="100" value="60" />
+          </div>
+        </div>
+
+        <div class="card palette">
+          <h4>Color Palette</h4>
+          <div class="colors">
+            <div class="swatch" data-color="#FF6B6B" style="background:#FF6B6B">#FF6B6B</div>
+            <div class="swatch" data-color="#FFD93D" style="background:#FFD93D">#FFD93D</div>
+            <div class="swatch" data-color="#6BCB77" style="background:#6BCB77">#6BCB77</div>
+            <div class="swatch" data-color="#4D96FF" style="background:#4D96FF">#4D96FF</div>
+            <div class="swatch" data-color="#8557FF" style="background:#8557FF">#8557FF</div>
+          </div>
+          <small class="muted">Click a swatch to set header accent color.</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="box">
+          <h3>Note Box</h3>
+          <p class="muted">This box uses subtle shadowing and a soft border-radius — tweak CSS variables in styles.css to experiment.</p>
+        </div>
+
+        <div class="box outline">
+          <h3>Outline Box</h3>
+          <p>Use outline variant for more contrast. Try toggling classes or editing styles to learn effects.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="panel right">
+      <h2>Modern Table</h2>
+
+      <div class="table-wrap">
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th data-key="id">ID ▾</th>
+              <th data-key="name">Name ▾</th>
+              <th data-key="role">Role ▾</th>
+              <th data-key="status">Status ▾</th>
+              <th data-key="progress">Progress ▾</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Alex Rivers</td>
+              <td>Designer</td>
+              <td><span class="badge success">Active</span></td>
+              <td>
+                <div class="pbar"><div style="width: 72%"></div></div>
+              </td>
+              <td>
+                <button class="btn subtle small edit">Edit</button>
+                <button class="btn danger small delete">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>Jin Park</td>
+              <td>Frontend</td>
+              <td><span class="badge warning">Pending</span></td>
+              <td>
+                <div class="pbar"><div style="width: 48%"></div></div>
+              </td>
+              <td>
+                <button class="btn subtle small edit">Edit</button>
+                <button class="btn danger small delete">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>Maria Gomez</td>
+              <td>Backend</td>
+              <td><span class="badge success">Active</span></td>
+              <td>
+                <div class="pbar"><div style="width: 95%"></div></div>
+              </td>
+              <td>
+                <button class="btn subtle small edit">Edit</button>
+                <button class="btn danger small delete">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="controls-row">
+        <div class="mini-form">
+          <input id="newName" placeholder="Name" />
+          <input id="newRole" placeholder="Role" />
+          <button id="pushRow" class="btn primary small">Add to Table</button>
+        </div>
+
+        <div class="legend">
+          <span class="badge success">Active</span>
+          <span class="badge warning">Pending</span>
+          <span class="badge danger">Blocked</span>
+        </div>
+      </div>
+
+      <h3>Cards</h3>
+      <div class="card-grid">
+        <div class="card mini">
+          <h4>Card A</h4>
+          <p class="muted">Small card with action</p>
+          <div class="card-actions">
+            <button class="btn subtle small">Share</button>
+            <button class="btn primary small">Open</button>
+          </div>
+        </div>
+
+        <div class="card mini">
+          <h4>Card B</h4>
+          <p class="muted">Try double-clicking the title to edit.</p>
+          <div class="card-actions">
+            <button class="btn subtle small">Edit</button>
+            <button class="btn danger small">Remove</button>
+          </div>
+        </div>
+
+        <div class="card mini">
+          <h4>Card C</h4>
+          <p class="muted">Progress demo</p>
+          <div class="pbar small"><div style="width: 40%"></div></div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Made for training — tweak styles and scripts freely. Current user: dycreator007</small>
   </footer>
 
   <script src="script.js"></script>
